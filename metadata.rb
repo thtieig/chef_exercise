@@ -1,10 +1,10 @@
 name 'lamp_centos7'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'ChrisTian'
+maintainer_email 'thtieig@gmail.com'
 license 'All Rights Reserved'
 description 'Installs/Configures lamp_centos7'
 long_description 'Installs/Configures lamp_centos7'
-version '0.1.0'
+version '0.1.5'
 chef_version '>= 12.1' if respond_to?(:chef_version)
 
 # The `issues_url` points to the location where issues for this cookbook are
