@@ -31,5 +31,3 @@ Here some handy commands:
 
 This is created **_just_** for learning purposes and is not intended for production environments.
 Use it at your own risk :-)
-
-
