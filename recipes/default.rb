@@ -24,26 +24,24 @@ service 'firewalld' do
   action [:enable, :start]
 end
 
-firewalld_service 'http' do
-    action :add
-    zone   'public'
+execute 'firewall_ssh' do
+  command '/usr/bin/firewall-cmd  --permanent --zone public --add-service ssh'
+  ignore_failure true
 end
 
-firewalld_service 'https' do
-    action :add
-    zone   'public'
+execute 'firewall_http' do
+  command '/usr/bin/firewall-cmd  --permanent --zone public --add-service http'
+  ignore_failure true
 end
 
-firewalld_service 'ssh' do
-    action :add
-    zone   'public'
+execute 'firewall_https' do
+  command '/usr/bin/firewall-cmd  --permanent --zone public --add-service https'
+  ignore_failure true
 end
 
 service 'firewalld' do
   action [:restart]
 end
-
-
 
 
 # Database setup
@@ -52,3 +50,5 @@ package ['mariadb-server', 'mariadb']
 service 'mariadb' do
   action [:enable, :start]
 end
+
+# 'phpmyadmin'
