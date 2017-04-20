@@ -1,0 +1,13 @@
+{
+   "name": "web",
+   "description": "Role for Web Server",
+   "json_class": "Chef::Role",
+   "override_attributes": {
+   },
+   "chef_type": "role",
+   "run_list": ["recipe[lamp_centos7::default]",
+                "recipe[lamp_centos7::web]"
+   ],
+   "env_run_lists": {
+   }
+}
