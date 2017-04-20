@@ -1,0 +1,13 @@
+{
+   "name": "db",
+   "description": "Role for DB Server",
+   "json_class": "Chef::Role",
+   "override_attributes": {
+   },
+   "chef_type": "role",
+   "run_list": ["recipe[lamp_centos7::default]",
+                "recipe[lamp_centos7::db]"
+   ],
+   "env_run_lists": {
+   }
+}

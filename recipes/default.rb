@@ -6,7 +6,7 @@
 
 
 # Default packages and setup
-package ['vim', 'cowsay', 'firewalld']
+package ['vim', 'dos2unix', 'firewalld']
 
 service 'firewalld' do
   action [:enable, :start]
