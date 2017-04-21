@@ -62,5 +62,5 @@ You might find handy also to verify when the *chef-client* contacted the Chef se
 
 
 
-DISCLAIMER: This is created **_just_** for learning purposes and is not intended for production environments.
+DISCLAIMER: This has been created **_just_** for learning purposes and is not intended for production environments.
 Use it at your own risk :-)
