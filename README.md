@@ -16,13 +16,16 @@ The file *Berksfile* is already configured for you.
 ## Use of Chef Supermarket cookbook
 
 ### Download
-`berks install`
-
+```
+berks install
+```
 You should be able to see the files physically downloaded in `~/.berkshelf/cookbooks`. Use `ls` to check.
 Once done, you need to push them onto the Chef Server.
 
 ### Upload to the Chef Server
-`berks upload`
+```
+berks upload
+```
 
 Now all the files are available and you can play with the cookbook :-)
 
@@ -38,10 +41,14 @@ knife role from file roles/web.json
 knife role from file roles/db.json
 ```
 ### Check what's available
-`knife role list`
+```
+knife role list
+```
 
 ### View the role *web* pushed
-`knife role show web`
+```
+knife role show web
+```
 
 ### Assign a role to a specific node
 ```
@@ -56,7 +63,9 @@ knife node show node2
 
 You might find handy also to verify when the *chef-client* contacted the Chef server.
 ### Check pull status for web role
-`knife status 'role:web' --run-list`
+```
+knife status 'role:web' --run-list
+```
 
 > Remember that if you make any change to the cookbook you always need to change the version on the *metadata.rb* file and upload it to the Chef Server, otherwise the *chef-client* will keep pulling the old version of your cookbook ;-)
 
