@@ -33,9 +33,10 @@ Now all the files are available and you can play with the cookbook :-)
 ## Here some handy commands
 
 ### Push a role to Chef Server
-`knife role from file roles/web.json`
-`knife role from file roles/db.json`
-
+```
+knife role from file roles/web.json
+knife role from file roles/db.json
+```
 ### Check what's available
 `knife role list`
 
@@ -43,13 +44,15 @@ Now all the files are available and you can play with the cookbook :-)
 `knife role show web`
 
 ### Assign a role to a specific node
-`knife node run_list set node1 "role[web]"`
-`knife node run_list set node2 "role[db]"`
-
+```
+knife node run_list set node1 "role[web]"
+knife node run_list set node2 "role[db]"
+```
 ### Verify
-`knife node show node1`
-`knife node show node2`
-
+```
+knife node show node1
+knife node show node2
+```
 
 You might find handy also to verify when the *chef-client* contacted the Chef server.
 ### Check pull status for web role
