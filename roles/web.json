@@ -2,11 +2,19 @@
    "name": "web",
    "description": "Role for Web Server",
    "json_class": "Chef::Role",
+   "default_attributes": {
+     "chef_client": {
+       "interval": 300,
+       "splay": 60
+     }
+   },
    "override_attributes": {
    },
    "chef_type": "role",
    "run_list": ["recipe[lamp_centos7::default]",
-                "recipe[lamp_centos7::web]"
+                "recipe[lamp_centos7::web]",
+		"recipe[chef-client::default]",
+                "recipe[chef-client::delete_validation]"
    ],
    "env_run_lists": {
    }
